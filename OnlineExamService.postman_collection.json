@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "4c7f394f-9628-4b1a-92b1-3ac938fab428",
+		"name": "OnlineExamService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add a test",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwe",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "qwe",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"testName\":\"GK-Test\",\n    \"questions\": [\n        {\n            \"question\": \"Which one of the following river flows between Vindhyan and Satpura ranges?\",\n            \"options\": {\n                \"1\":\"Narmada\",\n                \"2\":\"Mahanadi\",\n                \"3\":\"Son\",\n                \"4\":\"Netravati\"\n            },\n            \"answer\":1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/test",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Test by name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwe",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "qwe",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/test?testName=GK-Test",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test"
+					],
+					"query": [
+						{
+							"key": "testName",
+							"value": "GK-Test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get question by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwe",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "qwe",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/question?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"question"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add candidate",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwe",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "qwe",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"shubham.1997.33@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/candidate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get candidate by email",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwe",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "qwe",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/candidate?email=shubham.1997.33@gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidate"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "shubham.1997.33@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "assign exam",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "qwe",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "qwe",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"randomText\",\n    \"testName\": \"GK-Test\",\n    \"email\":\"shubham.1997.33@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/test/assign",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"assign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch exam Questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/exam/1?email=shubham.1997.33@gmail.com&password=randomText&testName=GK-Test",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exam",
+						"1"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "shubham.1997.33@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "randomText"
+						},
+						{
+							"key": "testName",
+							"value": "GK-Test"
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Result",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " [\n        {\n            \"id\": 1,\n            \"question\": \"Which one of the following river flows between Vindhyan and Satpura ranges?\",\n            \"options\": {\n                \"1\": \"Narmada\",\n                \"2\": \"Mahanadi\",\n                \"3\": \"Son\",\n                \"4\": \"Netravati\"\n            },\n            \"answer\": 1,\n            \"submitTime\": \"2020-09-20 16:18:11\"\n        }\n]    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/exam/1?email=shubham.1997.33@gmail.com&password=randomText&testName=GK-Test",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exam",
+						"1"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "shubham.1997.33@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "randomText"
+						},
+						{
+							"key": "testName",
+							"value": "GK-Test"
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Result of a student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/exam?email=shubham.1997.33@gmail.com&testName=GK-Test",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exam"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "shubham.1997.33@gmail.com"
+						},
+						{
+							"key": "testName",
+							"value": "GK-Test"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
